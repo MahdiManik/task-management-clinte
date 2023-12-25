@@ -3,11 +3,11 @@ import { useDrag } from "react-dnd";
 import UseAxiosPublic from "../Hooks/useAxiosPublic/UseAxiosPublic";
 
 const SingleTask = ({ taskId }) => {
-  const [task, setTask] = useState({});
+  const [task, setTask] = useState([]);
   const axiosPublic = UseAxiosPublic();
 
   useEffect(() => {
-    // Fetch tasks from the backend when the component mounts
+    // Fetch the specific task from the backend when the component mounts
     axiosPublic.get(`/tasks/${taskId}`).then((res) => {
       setTask(res.data);
     });
@@ -37,3 +37,4 @@ const SingleTask = ({ taskId }) => {
 };
 
 export default SingleTask;
+

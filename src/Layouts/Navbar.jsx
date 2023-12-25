@@ -44,11 +44,11 @@ const Navbar = () => {
             <NavLink className="hover:text-[#635fc7]" to={"/"}>
               Home
             </NavLink>
-            <NavLink className="hover:text-[#635fc7]" to={"/menu"}>
-              Our Menu
+            <NavLink className="hover:text-[#635fc7]" to={"/dashboard"}>
+              Dashboard
             </NavLink>
-            <NavLink className="hover:text-[#635fc7]" to={"/order/salad"}>
-              Our Shop
+            <NavLink className="hover:text-[#635fc7]" to={"/contact"}>
+              Contact us
             </NavLink>
 
             {user ? (

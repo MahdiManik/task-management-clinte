@@ -7,6 +7,7 @@ import PrivateRoute from "./PrivateRoute/PrivateRoute";
 import Dashboard from "../Layouts/Dashboard";
 import UserHome from "../DashboardPages/UserHome";
 import AddItem from "../DashboardPages/AddItem";
+import ContactUs from "../Pages/Contact/ContactUs";
 
 export const router = createBrowserRouter([
   {
@@ -16,6 +17,10 @@ export const router = createBrowserRouter([
       {
         index: true,
         element: <Home />,
+      },
+      {
+        path: "/contact",
+        element: <ContactUs />,
       },
     ],
   },

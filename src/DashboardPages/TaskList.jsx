@@ -15,7 +15,6 @@ const TaskList = ({ title, listName, AddTask, onMoveTask }) => {
   });
 
   useEffect(() => {
-
     axiosPublic.get(`/tasks}`).then((res) => {
       setTasks(res.data);
     });
@@ -28,11 +27,11 @@ const TaskList = ({ title, listName, AddTask, onMoveTask }) => {
       style={{ border: `2px dashed ${isOver ? "red" : "black"}` }}
     >
       <h3>{title}</h3>
-      <div>
+      {/*<div>
         {tasks.map((task) => (
           <SingleTask key={task.id} taskId={task.id} />
         ))}
-      </div>
+      </div>*/}
       <SingleTask onSubmit={(data) => AddTask(data, listName)} />
     </div>
   );
